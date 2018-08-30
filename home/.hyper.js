@@ -12,7 +12,7 @@ module.exports = {
     fontSize: 13,
 
     // font family with optional fallbacks
-    fontFamily: '"FuraCode NF", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: '"FuraCode Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.8)',
@@ -84,7 +84,7 @@ module.exports = {
     //
     // Powershell on Windows
     // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-    shell: '',
+    shell: '/bin/zsh',
 
     // for setting shell arguments (i.e. for using interactive shellArgs: ['-i'])
     // by default ['--login'] will be used
@@ -115,8 +115,8 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ['hyper-dracula', 'hyper-statusline'],
-  //  plugins: ['hyper-dracula', 'hyper-statusline', 'hyper-dark-scrollbar', 'hypercwd'],
+  plugins: ['hyperocean', 'hyper-statusline'],
+  //  plugins: ['hyper-flat', 'hyper-statusline', 'hyper-dark-scrollbar', 'hypercwd'],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
