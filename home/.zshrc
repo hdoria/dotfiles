@@ -6,9 +6,16 @@ export LANG=en_US.UTF-8
 
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/hdoria/.oh-my-zsh
+
+alias ls='colorls --dark --sort-dirs --report'
+alias lc='colorls --tree --dark'
+
+if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
+eval "$(xcenv init -)"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -22,11 +29,47 @@ export ZSH=/Users/hdoria/.oh-my-zsh
 # An empty array have no effect
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status chruby node_version)
-POWERLEVEL9K_STATUS_VERBOSE=false
+ZSH_THEME="spaceship"
+
+SPACESHIP_PROMPT_ADD_NEWLINE="true"
+SPACESHIP_CHAR_SYMBOL=" \uf0e7"
+SPACESHIP_CHAR_PREFIX="\uf296"
+SPACESHIP_CHAR_SUFFIX=(" ")
+SPACESHIP_CHAR_COLOR_SUCCESS="yellow"
+SPACESHIP_PROMPT_DEFAULT_PREFIX="$USER"
+SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
+SPACESHIP_USER_SHOW="true"
+SPACESHIP_RUBY_SHOW="true"
+SPACESHIP_XCODE_SHOW_LOCAL="true"
+
+# SWIFT
+SPACESHIP_SWIFT_PREFIX="swift:("
+SPACESHIP_SWIFT_SUFFIX=") "
+SPACESHIP_SWIFT_SYMBOL=""
+SPACESHIP_SWIFT_SHOW_LOCAL=true
+SPACESHIP_SWIFT_SHOW_GLOBAL=false
+
+# RUBY
+SPACESHIP_RUBY_SHOW=true
+SPACESHIP_RUBY_PREFIX="$SPACESHIP_PROMPT_DEFAULT_PREFIX"
+SPACESHIP_RUBY_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
+SPACESHIP_RUBY_SYMBOL="💎 "
+SPACESHIP_RUBY_COLOR="red"
+
+# XCODE
+SPACESHIP_XCODE_SHOW=true
+SPACESHIP_XCODE_SHOW_LOCAL=true
+SPACESHIP_XCODE_SHOW_GLOBAL=true
+SPACESHIP_XCODE_PREFIX="$SPACESHIP_PROMPT_DEFAULT_PREFIX"
+SPACESHIP_XCODE_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
+SPACESHIP_XCODE_SYMBOL="🛠 "
+SPACESHIP_XCODE_COLOR="blue"
+
+#ZSH_THEME="powerlevel9k/powerlevel9k"
+#POWERLEVEL9K_MODE='nerdfont-complete'
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time dir vcs)
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status chruby node_version)
+#POWERLEVEL9K_STATUS_VERBOSE=false
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
