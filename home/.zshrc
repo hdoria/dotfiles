@@ -6,7 +6,7 @@ export LANG=en_US.UTF-8
 
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/hdoria/.oh-my-zsh
@@ -115,6 +115,7 @@ SPACESHIP_XCODE_COLOR="blue"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh

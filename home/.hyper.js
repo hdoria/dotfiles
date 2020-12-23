@@ -12,7 +12,7 @@ module.exports = {
     fontSize: 13,
 
     // font family with optional fallbacks
-    fontFamily: '"FuraCode Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: '"FiraCode Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.8)',
@@ -121,12 +121,12 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
- //   'hyperocean', 
-    'hyper-materialshell',
-    'hyper-statusline',
-    'hyperterm-bold-tab',
-    'hyper-tabs-enhanced',
-    'hyper-simple-highlight-active-session',
+   'hyperocean', 
+    // 'hyper-materialshell',
+    // 'hyper-statusline',
+    // 'hyperterm-bold-tab',
+    // 'hyper-tabs-enhanced',
+    // 'hyper-simple-highlight-active-session',
     'hypercwd',
     'hyper-pane',
     'hyper-search'
