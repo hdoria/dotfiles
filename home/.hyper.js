@@ -4,12 +4,16 @@
 
 module.exports = {
   config: {
+    // Disabling WebGL renderer to make font-ligatures work
+    // https://github.com/tolbertam/hyper-font-ligatures#disabling-webgl-rendering
+    webGLRenderer: false,
+
     // Choose either "stable" for receiving highly polished,
     // or "canary" for less polished but more frequent updates
     updateChannel: 'canary',
 
     // default font size in pixels for all tabs
-    fontSize: 13,
+    fontSize: 12,
 
     // font family with optional fallbacks
     fontFamily: '"FiraCode Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
@@ -36,7 +40,7 @@ module.exports = {
     css: '',
 
     // custom css to embed in the terminal window
-    termCSS: '',
+    // termCSS: '',
 
     // set to `true` (without backticks) if you're using a Linux setup that doesn't show native menus
     // default: `false` on Linux, `true` on Windows (ignored on macOS)
@@ -46,6 +50,13 @@ module.exports = {
     // additionally, set to `'left'` if you want them on the left, like in Ubuntu
     // default: `true` on windows and Linux (ignored on macOS)
     showWindowControls: '',
+
+    // custom css to embed in the terminal window
+    termCSS: `
+    x-screen x-row {
+        font-variant-ligatures: initial;
+    }
+    `,
 
     // custom padding (css format, i.e.: `top right bottom left`)
     padding: '12px 14px',
@@ -73,7 +84,7 @@ module.exports = {
     },
 
     verminal: {
-      fontFamily: '"FuraCode Nerd Font"',
+      fontFamily: '"FiraCode Nerd Font"',
       fontSize: 13
     },
 
@@ -121,16 +132,21 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-   'hyperocean', 
-    // 'hyper-materialshell',
-    // 'hyper-statusline',
-    // 'hyperterm-bold-tab',
-    // 'hyper-tabs-enhanced',
-    // 'hyper-simple-highlight-active-session',
-    'hypercwd',
-    'hyper-pane',
-    'hyper-search'
-  ],
+    // "hyperblue-vibrancy",
+  //  'hyperocean', 
+  // 'hyperterm-chesterish',
+  //  'verminal',
+  // 'hyper-materialshell',
+  // 'hyper-statusline',
+  // 'hyperterm-bold-tab',
+  // 'hyper-tabs-enhanced',
+  // 'hyper-simple-highlight-active-session',
+  // 'hypercwd',
+  // 'hyper-pane',
+  // 'hyper-search'
+  'hyper-active-tab',
+  'hyper-one-dark', 
+  "hyper-font-ligatures"],
   //  plugins: ['hyper-flat', 'hyper-statusline', 'hyper-dark-scrollbar', 'hypercwd'],
 
   // in development, you can create a directory under

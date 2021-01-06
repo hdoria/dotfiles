@@ -11,8 +11,11 @@ source /usr/local/share/chruby/auto.sh
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/hdoria/.oh-my-zsh
 
+alias lls='colorls -h --group-directories-first -1'
 alias ls='colorls --dark --sort-dirs --report'
 alias lc='colorls --tree --dark'
+alias l='colorls --group-directories-first --almost-all'
+alias ll='colorls --group-directories-first --almost-all --long'
 
 if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
 eval "$(xcenv init -)"
@@ -45,24 +48,24 @@ SPACESHIP_XCODE_SHOW_LOCAL="true"
 # SWIFT
 SPACESHIP_SWIFT_PREFIX="swift:("
 SPACESHIP_SWIFT_SUFFIX=") "
-SPACESHIP_SWIFT_SYMBOL=""
+SPACESHIP_SWIFT_SYMBOL=" "
 SPACESHIP_SWIFT_SHOW_LOCAL=true
 SPACESHIP_SWIFT_SHOW_GLOBAL=false
 
 # RUBY
 SPACESHIP_RUBY_SHOW=true
-SPACESHIP_RUBY_PREFIX="$SPACESHIP_PROMPT_DEFAULT_PREFIX"
+SPACESHIP_RUBY_PREFIX=""
 SPACESHIP_RUBY_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-SPACESHIP_RUBY_SYMBOL="💎 "
+SPACESHIP_RUBY_SYMBOL=" 💎  "
 SPACESHIP_RUBY_COLOR="red"
 
 # XCODE
 SPACESHIP_XCODE_SHOW=true
 SPACESHIP_XCODE_SHOW_LOCAL=true
 SPACESHIP_XCODE_SHOW_GLOBAL=true
-SPACESHIP_XCODE_PREFIX="$SPACESHIP_PROMPT_DEFAULT_PREFIX"
+SPACESHIP_XCODE_PREFIX=" "
 SPACESHIP_XCODE_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-SPACESHIP_XCODE_SYMBOL="🛠 "
+SPACESHIP_XCODE_SYMBOL="  🛠  "
 SPACESHIP_XCODE_COLOR="blue"
 
 #ZSH_THEME="powerlevel9k/powerlevel9k"
